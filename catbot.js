@@ -27,7 +27,7 @@ module.exports = function (req, res, next) {
 			"username" : "catbot",
 			"channel" : req.body.channel_id,
 			"icon_emoji" : ":smile_cat:",
-			"text" : "randomMessage(greetings) + randomMessage(messages) + randomMessage(goodbyes)",
+			//"text" : randomMessage(greetings) + randomMessage(messages) + randomMessage(goodbyes),
 			"attachments": [
 				{
 					"fallback": "Kitteh",
