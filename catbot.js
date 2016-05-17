@@ -17,9 +17,9 @@ var buildResponse = function(res, userName, payload) {
 module.exports = function (req, res, next) {
 	var userName = req.body.user_name;
 	var iconEmojis = [':smile_cat:',':joy_cat:',':smiley_cat:',':cat:'];
-	var greetings = ['','O hai, ', 'Hai, ','O hai ' + userName + ', ', 'Hai ' + userName + ', '];
+	var greetings = ['','o hai, ', 'hai, ','o hai ' + userName + ', ', 'hai ' + userName + ', '];
 	var messages = ['check out dis kitteh.','ur gif r ready.','you can haz.','moar kittehz?'];
-	var goodbyes = ['', ' Kthxbai.',' Bai.'];
+	var goodbyes = ['', ' kthxbai.',' bai.'];
 	var catPromise = rp(edgecatsService);
 
 	catPromise.then(function (htmlString) {
