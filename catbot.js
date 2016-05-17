@@ -25,13 +25,12 @@ module.exports = function (req, res, next) {
 		// Process html...
 		var botPayload = {
 			"username" : "catbot",
-			//"channel" : req.body.channel_id,
+			"channel" : req.body.channel_id,
 			"icon_emoji" : ":smile_cat:",
-			//text : randomMessage(greetings) + randomMessage(messages) + randomMessage(goodbyes),
+			"text" : "randomMessage(greetings) + randomMessage(messages) + randomMessage(goodbyes)",
 			"attachments": [
 				{
 					"fallback": "Kitteh",
-					"pretext": randomMessage(greetings) + randomMessage(messages) + randomMessage(goodbyes),
 					"image_url": htmlString
 				}
 			]
