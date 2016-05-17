@@ -24,9 +24,9 @@ module.exports = function (req, res, next) {
 	catPromise.then(function (htmlString) {
 		// Process html...
 		var botPayload = {
-			"username" : 'catbot',
+			"username" : "catbot",
 			"channel" : req.body.channel_id,
-			"icon_emoji" : ':smile_cat:',
+			"icon_emoji" : ":smile_cat:",
 			//text : randomMessage(greetings) + randomMessage(messages) + randomMessage(goodbyes),
 			"attachments": [
 				{
