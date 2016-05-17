@@ -11,8 +11,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // test route
 app.get('/', function (req, res) { res.status(200).send('<img src="http://edgecats.net/first" alt="a random cat gif!"/>') });
 
-// get catz
+// get cat gif
 app.post('/getcat', catbot);
+
+// get cat facts
+app.get('/getfact', catbot);
 
 // error handler
 app.use(function (err, req, res, next) {
