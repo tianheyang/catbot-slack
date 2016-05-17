@@ -16,8 +16,9 @@ var buildResponse = function(res, userName, payload) {
 
 module.exports = function (req, res, next) {
 	var userName = req.body.user_name;
-	var greetings = ['','O hai ' + userName + ', ',userName + ', '];
-	var messages = ['ur gif r ready.','i liek dis gif.','you can haz kitteh.','srsly kyoot kittehz.','dis iz so funneh.','moar kittehz.'];
+	var iconEmojis = [':smile_cat:',':joy_cat:',':smiley_cat:',':cat:'];
+	var greetings = ['Hai, ','O hai ' + userName + ', ',userName + ', '];
+	var messages = ['check out dis kitteh.','ur gif r ready.','you can haz.','moar kittehz? k.'];
 	var goodbyes = ['', ' kthxbai.'];
 	var catPromise = rp(edgecatsService);
 
@@ -26,8 +27,8 @@ module.exports = function (req, res, next) {
 		var botPayload = {
 			"username" : "catbot",
 			"channel" : req.body.channel_id,
-			"icon_emoji" : ":smile_cat:",
-			//"text" : randomMessage(greetings) + randomMessage(messages) + randomMessage(goodbyes),
+			"icon_emoji" : randomMessage(iconEmojis),
+			"text" : randomMessage(greetings) + randomMessage(messages) + randomMessage(goodbyes),
 			"attachments": [
 				{
 					"fallback": "Kitteh",
