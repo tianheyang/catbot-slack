@@ -17,8 +17,8 @@ var buildResponse = function(res, userName, payload) {
 module.exports = function (req, res, next) {
 	var userName = req.body.user_name;
 	var greetings = ['','O hai ' + userName + ', ',userName + ', '];
-	var messages = ['ur gif r ready:','i liek dis:','you can haz:','srsly kyoot:','dis iz so funneh:','moar kittehz:'];
-	var goodbyes = ['', 'kthxbai'];
+	var messages = ['ur gif r ready.','i liek dis gif.','you can haz kitteh.','srsly kyoot kittehz.','dis iz so funneh.','moar kittehz.'];
+	var goodbyes = ['', ' kthxbai.'];
 	var catPromise = rp(edgecatsService);
 
 	catPromise.then(function (htmlString) {
@@ -27,8 +27,14 @@ module.exports = function (req, res, next) {
 			username : 'catbot',
 			channel : req.body.channel_id,
 			icon_emoji : ':cat:',
-			//text : randomMessage(greetings) + randomMessage(messages) + htmlString + randomMessage(goodbyes),
-			text : htmlString
+			//text : randomMessage(greetings) + randomMessage(messages) + randomMessage(goodbyes),
+			attachments: [
+				{
+					"fallback": "Kitteh",
+					"pretext": randomMessage(greetings) + randomMessage(messages) + randomMessage(goodbyes),
+					"image_url": htmlString
+				}
+			]
 		};
 		buildResponse(res, userName, botPayload);
 	})
