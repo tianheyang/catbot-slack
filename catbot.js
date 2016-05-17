@@ -26,7 +26,7 @@ module.exports = function (req, res, next) {
 		var botPayload = {
 			username : 'catbot',
 			channel : req.body.channel_id,
-			icon_emoji : ':cat:',
+			icon_emoji : ':smile_cat:',
 			//text : randomMessage(greetings) + randomMessage(messages) + randomMessage(goodbyes),
 			attachments: [
 				{
