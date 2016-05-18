@@ -5,6 +5,7 @@ if (!process.env.BOT_TOKEN) {
 }
 
 // Variables
+var http = require('http');
 var Botkit = require('botkit');
 var os = require('os');
 var rp = require('request-promise');
@@ -88,3 +89,6 @@ controller.hears(['fact','facts','factme'], 'direct_message,direct_mention,menti
 		bot.reply(message, "Couldn't get a cat fact right meow :(");
 	});
 });
+
+// For avoiding Heroku $PORT error
+http.createServer(function (req, res) { res.writeHead(200, {'Content-Type': 'text/plain'}); res.send('Catbot is running\n'); }).listen(process.env.PORT || 5000);
