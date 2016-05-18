@@ -1,5 +1,5 @@
 # catbot-slack
-![](https://i.imgur.com/rj2yux8.gif)
+![demo](http://i.imgur.com/rj2yux8.gif)
 
 Cat pictures have been shown to improve productivity in the office. Increase focus, reduce stress, and refresh your team with the best artisanal cat gifs curated by [edgecats.net](https://github.com/flores/moarcats) and up-to-date cat facts from [catfacts-api](http://catfacts-api.appspot.com/).
 
