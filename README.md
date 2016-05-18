@@ -9,4 +9,6 @@
 3. If using the Heroku deploy button, simply copypasta the bot token generated from step 2 into the `BOT_TOKEN` environment variable field, and set the `DEBUG` environment variable to `false`. You should now be able to request a `gif` or a `cat fact` from Catbot.
 4. Executing the app locally or on an alternative host requires [Node.js](https://nodejs.org). Once Node.js has been installed, download Catbot's helper packages by running `npm install` in the project root directory, create a `.env` file with your `BOT_TOKEN` and a `DEBUG` variable, and start the app with `npm start`.
 
+If you're running on a free Heroku dyno, you may want to consider using [Kaffeine](http://kaffeine.herokuapp.com/) to keep Catbot awake.
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
