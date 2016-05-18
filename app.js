@@ -16,7 +16,7 @@ var catfactsService = {
 };
 var iconEmojis = [':smile_cat:',':joy_cat:',':smiley_cat:',':cat:'];
 var controller = Botkit.slackbot({
-	debug: true,
+	debug: process.env.DEBUG,
 });
 var bot = controller.spawn({
 	token: process.env.BOT_TOKEN
