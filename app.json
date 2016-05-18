@@ -1,6 +1,6 @@
 {
   "name": "Catbot",
-  "description": "Cute animal pictures have been scientifically proven to improve productivity in the office. Embrace the power of cute cats, reduce stress, and refresh your team with the best artisanal cat gifs curated by edgecats.net, and up-to-date cat facts from catfacts-api.appspot.com",
+  "description": "Improve your Slack experience with cats.",
   "repository": "https://github.com/tianheyang/catbot-slack.git",
   "env": {
     "DEBUG": {
