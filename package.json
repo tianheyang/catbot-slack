@@ -22,8 +22,8 @@
   "homepage": "https://github.com/tianheyang/catbot-slack#readme",
   "dependencies": {
     "bluebird": "^3.3.5",
-    "body-parser": "^1.15.1",
-    "express": "^4.13.4",
+    "botkit": "^0.1.1",
+    "dotenv": "^2.0.0",
     "request": "^2.72.0",
     "request-promise": "^3.0.0"
   }
